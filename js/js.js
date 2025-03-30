@@ -1,18 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
-    adjustParagraphsSize();
-    window.addEventListener("resize", adjustParagraphsSize);
+    const menuToggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", function () {
+        menu.classList.toggle("active");
+    });
 });
 
-function adjustParagraphsSize() {
-    const paragraphs = document.querySelectorAll(".responsive-text"); // Hämta alla paragrafer med klassen
+
+document.addEventListener("DOMContentLoaded", function () {
+    adjustTextSize();
+    window.addEventListener("resize", adjustTextSize);
+});
+
+function adjustTextSize() {
+    const paragraphs = document.querySelectorAll(".responsive-text");
+    const heading = document.querySelector(".rubrik"); 
+    let paragraphSize, headingSize;
+
+    if (window.innerWidth < 400) {
+        paragraphSize = "12px";
+        headingSize = "40px";
+    } else if (window.innerWidth > 900) {
+        paragraphSize = "22px";
+        headingSize = "45px";  }  
+        else if (window.innerWidth > 400 && window.innerWidth < 510) {
+            paragraphSize = "15px"; 
+            headingSize = "45px";
+        }
+     else {
+        paragraphSize = "18px";
+        headingSize = "50px";
+    }
 
     paragraphs.forEach(paragraph => {
-        if (window.innerWidth < 400) {
-            paragraph.style.fontSize = "12px";
-        } else if (window.innerWidth > 900) {
-            paragraph.style.fontSize = "22px";
-        } else {
-            paragraph.style.fontSize = "18px";
-        }
+        paragraph.style.fontSize = paragraphSize;
     });
+
+    if (heading) {
+        heading.style.fontSize = headingSize;
+    }
 }
