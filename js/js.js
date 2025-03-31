@@ -23,7 +23,7 @@ function adjustTextSize() {
         headingSize = "40px";
     } else if (window.innerWidth > 900) {
         paragraphSize = "22px";
-        headingSize = "45px";  }  
+        headingSize = "55px";  }  
         else if (window.innerWidth > 400 && window.innerWidth < 510) {
             paragraphSize = "15px"; 
             headingSize = "45px";
@@ -41,3 +41,14 @@ function adjustTextSize() {
         heading.style.fontSize = headingSize;
     }
 }
+function updateHeadingSize() {
+    const heading = document.querySelector(".rubriken");
+    if (window.innerWidth > 700) {
+        heading.style.fontSize = "40px";
+    } else {
+        heading.style.fontSize = "24px";
+    }
+}
+
+document.addEventListener("DOMContentLoaded", updateHeadingSize);
+window.addEventListener("resize", updateHeadingSize);

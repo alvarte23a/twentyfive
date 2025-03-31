@@ -26,24 +26,24 @@ body {
 
 .section {
     grid-area: section;
-    border: 1px solid black;
+    background-color: #55ac53;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 12%;
+    padding-right: 12%;
 }
 .section1 {
-    margin-top: 2px;
     grid-area: section1;
+    background: linear-gradient(to bottom, #55ac53, rgba(255, 255, 255, 0.8));
     display: flex;
     justify-content: space-between;
     align-items: top;
 }
 .section2 {
-    margin-top: 2px;
     grid-area: section2;
+    background: linear-gradient(to bottom, #55ac53, rgba(255, 255, 255, 0.8));
     display: flex;
     justify-content: space-between;
     align-items: top;
@@ -61,12 +61,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: auto;
-    border-left: 1px solid black;
 }
 
-.grid-item1 h1 {
-    margin: 0;
-}
 
 .rubrik {
     font-size: 5vw;
@@ -77,6 +73,8 @@ body {
     color: white;
     text-shadow: 4px 4px 4px black;
 }
+
+
 
 img {
     width: 100%;
@@ -158,11 +156,10 @@ img {
 .grid-container2 {
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 35% 5% 40% auto;
+    grid-template-rows: 35% 40% 25%;
     grid-template-areas:
         "header02 header02"
-        "section01 section01"
-        "section02 section02"
+        "section02 section01"
         "footer01 footer01";
     height: 100vh;
 }
@@ -170,28 +167,124 @@ img {
 .header02{
     grid-area: header02;
     display: flex;
-    border: 1px solid black;
     text-align: center;
     justify-content: space-between;
 }
-.section01{
-    grid-area: section01;
-    display: flex;
-    border: 1px solid black;
-    text-align: center;
-    justify-content: space-between;
-}
+
 .section02{
+    background-color: #8DBAE4;
     grid-area: section02;
     display: flex;
-    border: 1px solid black;
     text-align: center;
     justify-content: space-between;
+    background: linear-gradient(to bottom, #8DBAE4 50%, #DCACB1);
+
 }
+.section01 {
+    grid-area: section01;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    overflow: hidden;
+ }
 .footer01{
     grid-area: footer01;
     display: flex;
-    border: 1px solid black;
     text-align: center;
     justify-content: space-between;
+}
+
+.grid-container3{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 20% 25% 25% 20%;
+    grid-template-areas:
+        "toppen toppen"
+        "headers01 headers02"
+        "sections01 sections02"
+        "mitten01 mitten02"
+        "footers01 footers02";
+    height: 100vh;
+}
+.toppen{
+        grid-area: toppen;
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        border: 1px solid black;
+    
+}
+.headers01{
+    grid-area: headers01;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.headers02{
+    grid-area: headers02;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    overflow: hidden;
+    background: linear-gradient(to right, #7C7764, white);
+}
+.sections01{
+    grid-area: sections01;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid black;
+
+}
+.sections02{
+    grid-area: sections02;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    overflow: hidden;
+    background: linear-gradient(to right, #615E99, white);
+}
+.mitten01{
+    grid-area: mitten01;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid black;
+
+}
+.mitten02{
+    grid-area: mitten02;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    overflow: hidden;
+    background: linear-gradient(to right, #AABCCC, white);
+}
+.footers01{
+    grid-area: footers01;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid black;
+
+}
+.footers02{
+    grid-area: footers02;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    overflow: hidden;
+}
+.rubriken {
+    color: white;
+    position: absolute;
+    top: 3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: black 4px 4px;
 }
