@@ -50,5 +50,6 @@ function updateHeadingSize() {
     }
 }
 
+
 document.addEventListener("DOMContentLoaded", updateHeadingSize);
 window.addEventListener("resize", updateHeadingSize);
